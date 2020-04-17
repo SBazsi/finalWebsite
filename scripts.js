@@ -20,37 +20,39 @@ function showSlides(n) {
   let atlas = "<br><br> You have to carry this 20 kg atlas weight for several meters. You can put it down if you cant hold it, there is no penalty for that";
   let finish = "<br><br> This is the finish line. The very last obstacle is to jump over some fire.";
   let sunset = "<br><br> After the race the sunset was pretty neat";
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  let tooltip = "";
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex - 1].alt;
 
   switch (slideIndex) {
-      case 1:
-        captionText.innerHTML += start;
-          break;
-          case 2:
-            captionText.innerHTML += water;
-              break;
-              case 3:
-        captionText.innerHTML += jump;
-          break;
-          case 4:
-        captionText.innerHTML += atlas;
-          break;
-          case 5:
-        captionText.innerHTML += finish;
-          break;
-          case 6:
-        captionText.innerHTML += sunset;
-          break;
-      
+    case 1:
+      captionText.innerHTML += start;
+
+      break;
+    case 2:
+      captionText.innerHTML += water;
+      break;
+    case 3:
+      captionText.innerHTML += jump;
+      break;
+    case 4:
+      captionText.innerHTML += atlas;
+      break;
+    case 5:
+      captionText.innerHTML += finish;
+      break;
+    case 6:
+      captionText.innerHTML += sunset;
+      break;
+
   }
 }
