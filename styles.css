@@ -96,10 +96,10 @@ body {
 font-weight: bold;
   }
   .row {
-      margin: 10px;
       margin-top: 20px;
+      margin-left: 15px;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
   }
   .row:after {
     content: "";
